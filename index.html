@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>CSS Experiment</title>
+<style>
+  :root {
+  --corgisize: 200px;
+  --bordersize: 2px;
+    
+  --bgcolor: #f1e36f;
+  --corgicolor: #deac33;
+  --corgiborder: #c6961d;
+}
+  body {
+    background-color: var(--bgcolor);
+  }
+  
+  .corgibase {
+    position: absolute;
+    
+    width: var(--corgisize);
+    height: var(--corgisize);
+    left: calc(50vw - calc(0.5 * var(--corgisize)));
+    top: calc(50vh - calc(0.5 * var(--corgisize)));
+    
+    background-color: var(--corgicolor);
+    border: var(--bordersize) solid var(--corgiborder);
+    border-radius: 50%;
+    border-bottom: none;
+  }
+  
+  .corgibase::before {
+		content: "";
+    position: absolute;
+    
+    width: calc(0.75 *var(--corgisize));
+    height: calc(0.75 *var(--corgisize));
+    left: calc(0.12 *var(--corgisize));
+    top: calc(0.25 *var(--corgisize));
+    
+    background-color: white;
+    border: var(--bordersize) solid var(--corgiborder);
+    border-radius: 50%;
+    border-bottom: none;
+
+  }
+  
+  .corgibase::after {
+    content: "";
+    position: absolute;
+    
+    width: calc(0.15 *var(--corgisize));
+    height: calc(0.2 *var(--corgisize));
+    left: calc(0.415 *var(--corgisize));
+    top: calc(0.25 *var(--corgisize));
+    
+    background-color: var(--corgicolor);
+    border: var(--bordersize) solid var(--corgiborder);
+    border-radius: 45%;
+    border-top: none;
+  }
+  
+  .corgibasedetails {
+    position: absolute;
+		font-family: "Monaco";
+    left: 50vw;
+    top: 50vh;
+    
+    
+  }
+  
+</style>
+</head>
+  
+<body>
+<div class="corgibase"></div>
+<div class="corgibasedetails">x</div>
+</body>
+</html>
