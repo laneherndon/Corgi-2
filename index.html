@@ -11,88 +11,117 @@
   --bgcolor: #f1e36f;
   --corgicolor: #deac33;
   --corgiborder: #c6961d;
-  --corgiblack: #211d18;
+  --corgiwhite: #f5ece1;
+  --corgiblack: #f7f2eb;
 }
   body {
     background-color: var(--bgcolor);
   }
-  
   .corgibase {
     position: absolute;
     
     width: var(--corgisize);
-    height: var(--corgisize);
+    height: calc(0.90 *var(--corgisize));
     left: calc(50vw - calc(0.5 * var(--corgisize)));
     top: calc(50vh - calc(0.5 * var(--corgisize)));
     
     background-color: var(--corgicolor);
     border: var(--bordersize) solid var(--corgiborder);
-    border-radius: 50%;
+    border-radius: 50% 50% 40% 40%;
     border-bottom: none;
   }
-  
   .corgibase::before {
 		content: "";
     position: absolute;
     
     width: calc(0.75 *var(--corgisize));
-    height: calc(0.75 *var(--corgisize));
+    height: calc(0.65 *var(--corgisize));
     left: calc(0.12 *var(--corgisize));
     top: calc(0.25 *var(--corgisize));
     
-    background-color: white;
+    background-color: var(--corgiwhite);
     border: var(--bordersize) solid var(--corgiborder);
-    border-radius: 50%;
+    border-radius: 50% 50% 40% 40%; 
     border-bottom: none;
-
-  }
-  
+  } 
   .corgibase::after {
     content: "";
     position: absolute;
     
     width: calc(0.18 *var(--corgisize));
     height: calc(0.25 *var(--corgisize));
-    left: calc(0.4 *var(--corgisize));
+    left: calc(0.39 *var(--corgisize));
     top: calc(0.225 *var(--corgisize));
     
     background-color: var(--corgicolor);
     border: var(--bordersize) solid var(--corgiborder);
     border-radius: 45%;
     border-top: none;
-  }
-  
+  } 
   .corgibasedetails {
     position: absolute;
     
     width: calc( 0.02 * var(--corgisize));
     height: calc( 0.1 * var(--corgisize));
-    left: calc(50vw - calc( 0.0004 * var(--corgisize)));
-    top: calc(50vh - calc( 0.01 * var(--corgisize)));
+    left: calc(50vw);
+    top: calc(50vh - calc( 0.025 * var(--corgisize)));
     
     background-color: var(--corgiblack);
     border-radius: 35%;
     transform: rotate(45deg);
   }
-  .corgibasedetails::after {
+  .corgibasedetails::before {
     content: "";
     position: absolute;
     
     width: calc( 0.02 * var(--corgisize));
     height: calc( 0.1 * var(--corgisize));
-    left: calc(50vw - calc( 0.0004 * var(--corgisize)));
-    top: calc(50vh - calc( 0.01 * var(--corgisize)));
+		left: calc( 0.0005 * var(--corgisize));
+    top: calc( 0.007 * var(--corgisize));
     
     background-color: var(--corgiblack);
     border-radius: 35%;
+		transform: rotate(90deg); 
+  }
+  .corgirightfoot {
+    position: absolute;
+    
+    width: calc(0.2 *var(--corgisize));
+    height: calc(0.35 *var(--corgisize));
+  	left: calc(50vw - calc(0.35 * var(--corgisize)));
+    top: calc(50vh + calc(0.15 * var(--corgisize)));
+    
+    background-color: var(--corgiwhite);
+    border: var(--bordersize) solid var(--corgiborder);
+    border-radius: 45%;
+    border-top: none;
+    border-left: 10px solid var(--corgiborder);
+    border-right: none;
     transform: rotate(5deg);
   }
-  
+  .corgileftfoot {
+    position: absolute;
+    
+    width: calc(0.2 *var(--corgisize));
+    height: calc(0.35 *var(--corgisize));
+  	left: calc(50vw + calc(0.1 * var(--corgisize)));
+    top: calc(50vh + calc(0.15 * var(--corgisize)));
+    
+    background-color: var(--corgiwhite);
+    border: var(--bordersize) solid var(--corgiborder);
+    border-radius: 45%;
+    border-top: none;
+    border-left: none;
+    border-right: 10px solid var(--corgiborder);
+    transform: rotate(350deg);
+  }
 </style>
 </head>
   
 <body>
 <div class="corgibase"></div>
 <div class="corgibasedetails"></div>
+<div class="corgirightfoot"></div>
+<div class="corgileftfoot"></div>
 </body>
 </html>
