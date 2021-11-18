@@ -12,50 +12,70 @@
   --corgicolor: #deac33;
   --corgiborder: #c6961d;
   --corgiwhite: #f5ece1;
-  --corgiblack: #594e3f;
+  --corgidarkwhite: #d4be9f;
+  --corgigrey: #998489;
   --corgipink: #fab4b8;
+  --corgidarkpink: #d99cac;
 }
   body {
     background-color: var(--bgcolor);
   }
+  .corgihead {
+    position: absolute;
+    
+    width: calc(0.5 *var(--corgisize));
+    height: calc(0.3 *var(--corgisize));
+    left: calc(50vw - calc(0.75 * var(--corgisize)));
+    top: calc(50vh - calc(0.35 * var(--corgisize)));
+    
+    background-color: var(--corgiwhite);
+   	border: var(--bordersize) solid var(--corgidarkwhite);
+    border-radius: 60% 90% 90% 90%;
+    border-top: none;
+    border-bottom: calc(4 * var(--bordersize)) solid var(--corgidarkwhite)
+  }
+  .corgihead::before {
+   position: absolute; 
+  }
+  
   .corgibase {
     position: absolute;
     
     width: calc(0.96 *var(--corgisize));
-    height: calc(0.90 *var(--corgisize));
+    height: calc(0.80 *var(--corgisize));
     left: calc(50vw - calc(0.5 * var(--corgisize)));
     top: calc(50vh - calc(0.5 * var(--corgisize)));
     
     background-color: var(--corgicolor);
     border: var(--bordersize) solid var(--corgiborder);
     border-radius: 50% 50% 40% 40%;
-    border-bottom: none;
+    border-bottom: calc(10 * var(--bordersize)) solid var(--corgiborder);
   }
   .corgibase::before {
 		content: "";
     position: absolute;
     
     width: calc(0.7 *var(--corgisize));
-    height: calc(0.65 *var(--corgisize));
+    height: calc(0.55 *var(--corgisize));
     left: calc(0.12 *var(--corgisize));
     top: calc(0.25 *var(--corgisize));
     
     background-color: var(--corgiwhite);
-    border: var(--bordersize) solid var(--corgiborder);
+    border: var(--bordersize) solid var(--corgidarkwhite);
     border-radius: 50% 50% 40% 40%; 
-    border-bottom: none;
+    border-bottom: calc(10 * var(--bordersize)) solid var(--corgidarkwhite);
   } 
   .corgibase::after {
     content: "";
     position: absolute;
     
-    width: calc(0.18 *var(--corgisize));
+    width: calc(0.17 *var(--corgisize));
     height: calc(0.25 *var(--corgisize));
-    left: calc(0.39 *var(--corgisize));
+    left: calc(0.38 *var(--corgisize));
     top: calc(0.225 *var(--corgisize));
     
     background-color: var(--corgicolor);
-    border: var(--bordersize) solid var(--corgiborder);
+    border: calc(2 * var(--bordersize)) solid var(--corgiborder);
     border-radius: 45%;
     border-top: none;
   } 
@@ -63,12 +83,14 @@
     position: absolute;
     
     width: calc( 0.02 * var(--corgisize));
-    height: calc( 0.1 * var(--corgisize));
+    height: calc( 0.11 * var(--corgisize));
     left: calc(50vw - calc( 0.01 * var(--corgisize)));
-    top: calc(50vh - calc( 0.025 * var(--corgisize)));
+    top: calc(50vh - calc( 0.015 * var(--corgisize)));
     
-    background-color: var(--corgiblack);
+    background-color: var(--corgigrey);
     border-radius: 35%;
+    border-bottom: calc(2 * var(--bordersize)) solid var(--corgidarkwhite);
+    border-right: calc(2 * var(--bordersize)) solid var(--corgidarkwhite);
     
     transform: rotate(45deg);
   }
@@ -77,12 +99,13 @@
     position: absolute;
     
     width: calc( 0.02 * var(--corgisize));
-    height: calc( 0.1 * var(--corgisize));
+    height: calc( 0.11 * var(--corgisize));
 		left: calc( 0.0005 * var(--corgisize));
     top: calc( 0.007 * var(--corgisize));
     
-    background-color: var(--corgiblack);
+    background-color: var(--corgigrey);
     border-radius: 35%;
+    border-top: calc(2 * var(--bordersize)) solid var(--corgidarkwhite);
     
 		transform: rotate(90deg); 
   }
@@ -98,9 +121,9 @@
     border: var(--bordersize) solid var(--corgiborder);
     border-radius: 45%;
     border-top: none;
-    border-bottom: none;
+    border-bottom: var(--bordersize) solid var(--corgidarkwhite);
     border-left: calc(5 * var(--bordersize)) solid var(--corgiborder);
-    border-right: none;
+    border-right: var(--bordersize) solid var(--corgidarkwhite);
     
     transform: rotate(5deg);
   }
@@ -109,13 +132,14 @@
     content: "";
     
     width: calc(0.14 *var(--corgisize));
-    height: calc(0.15 *var(--corgisize));
+    height: calc(0.12 *var(--corgisize));
     left: calc(0.03 * var(--corgisize));
     top: calc(0.15 * var(--corgisize));
     
     background-color: var(--corgipink);
     border-radius: 45% 45% 100% 100%;
     border-top: none;
+    border-bottom: calc(3 * var(--bordersize)) solid var(--corgidarkpink);
     border-left: none;
     border-right: none;
   }
@@ -128,7 +152,7 @@
     top: calc(0.2 * var(--corgisize));
     left: calc(0.03 * var(--corgisize));
     
-    border: calc(4 * var(--bordersize)) solid var(--corgipink);
+    border: calc(4 * var(--bordersize)) solid var(--corgidarkpink);
     border-radius: 50% 50% 100% 100%;
     border-top: none;
     border-left: none;
@@ -146,8 +170,8 @@
     border: var(--bordersize) solid var(--corgiborder);
     border-radius: 45%;
     border-top: none;
-    border-bottom: none;
-    border-left: none;
+    border-bottom: var(--bordersize) solid var(--corgidarkwhite);
+    border-left: var(--bordersize) solid var(--corgidarkwhite);
     border-right: calc(5 * var(--bordersize)) solid var(--corgiborder);
     
     transform: rotate(350deg);
@@ -157,13 +181,14 @@
     content: "";
     
     width: calc(0.14 *var(--corgisize));
-    height: calc(0.15 *var(--corgisize));
+    height: calc(0.12 *var(--corgisize));
     left: calc(0.03 * var(--corgisize));
     top: calc(0.15 * var(--corgisize));
     
     background-color: var(--corgipink);
     border-radius: 45% 45% 100% 100%;
     border-top: none;
+    border-bottom: calc(3 * var(--bordersize)) solid var(--corgidarkpink);
     border-left: none;
     border-right: none;
   }
@@ -176,7 +201,7 @@
     top: calc(0.2 * var(--corgisize));
     left: calc(0.03 * var(--corgisize));
     
-    border: calc(4 * var(--bordersize)) solid var(--corgipink);
+    border: calc(4 * var(--bordersize)) solid var(--corgidarkpink);
     border-radius: 50% 50% 100% 100%;
     border-top: none;
     border-left: none;
@@ -186,6 +211,7 @@
 </head>
   
 <body>
+<div class="corgihead"></div>
 <div class="corgibase"></div>
 <div class="corgibasedetails"></div>
 <div class="corgirightfoot"></div>
