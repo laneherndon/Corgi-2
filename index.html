@@ -11,6 +11,7 @@
   --bgcolor: #f1e36f;
   --corgicolor: #deac33;
   --corgiborder: #c6961d;
+  --corgiblack: #211d18;
 }
   body {
     background-color: var(--bgcolor);
@@ -50,10 +51,10 @@
     content: "";
     position: absolute;
     
-    width: calc(0.15 *var(--corgisize));
-    height: calc(0.2 *var(--corgisize));
-    left: calc(0.415 *var(--corgisize));
-    top: calc(0.25 *var(--corgisize));
+    width: calc(0.18 *var(--corgisize));
+    height: calc(0.25 *var(--corgisize));
+    left: calc(0.4 *var(--corgisize));
+    top: calc(0.225 *var(--corgisize));
     
     background-color: var(--corgicolor);
     border: var(--bordersize) solid var(--corgiborder);
@@ -63,11 +64,28 @@
   
   .corgibasedetails {
     position: absolute;
-		font-family: "Monaco";
-    left: 50vw;
-    top: 50vh;
     
+    width: calc( 0.02 * var(--corgisize));
+    height: calc( 0.1 * var(--corgisize));
+    left: calc(50vw - calc( 0.0004 * var(--corgisize)));
+    top: calc(50vh - calc( 0.01 * var(--corgisize)));
     
+    background-color: var(--corgiblack);
+    border-radius: 35%;
+    transform: rotate(45deg);
+  }
+  .corgibasedetails::after {
+    content: "";
+    position: absolute;
+    
+    width: calc( 0.02 * var(--corgisize));
+    height: calc( 0.1 * var(--corgisize));
+    left: calc(50vw - calc( 0.0004 * var(--corgisize)));
+    top: calc(50vh - calc( 0.01 * var(--corgisize)));
+    
+    background-color: var(--corgiblack);
+    border-radius: 35%;
+    transform: rotate(5deg);
   }
   
 </style>
@@ -75,6 +93,6 @@
   
 <body>
 <div class="corgibase"></div>
-<div class="corgibasedetails">x</div>
+<div class="corgibasedetails"></div>
 </body>
 </html>
