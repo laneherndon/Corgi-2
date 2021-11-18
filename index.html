@@ -23,19 +23,30 @@
   .corgihead {
     position: absolute;
     
-    width: calc(0.5 *var(--corgisize));
-    height: calc(0.3 *var(--corgisize));
-    left: calc(50vw - calc(0.75 * var(--corgisize)));
-    top: calc(50vh - calc(0.35 * var(--corgisize)));
+    width: calc(0.8 * var(--corgisize));
+    height: calc(0.35 * var(--corgisize));
+    left: calc(50vw - calc(1 * var(--corgisize)));
+    top: calc(50vh - calc(0.45 * var(--corgisize)));
     
     background-color: var(--corgiwhite);
    	border: var(--bordersize) solid var(--corgidarkwhite);
-    border-radius: 60% 90% 90% 90%;
-    border-top: none;
-    border-bottom: calc(4 * var(--bordersize)) solid var(--corgidarkwhite)
+    border-radius: 60% 10% 90% 100%;
+    border-bottom: calc(4 * var(--bordersize)) solid var(--corgidarkwhite);
+    
+    transform: rotate(25deg);
   }
   .corgihead::before {
-   position: absolute; 
+    content: "";
+    position: absolute;
+    
+    width: calc(0.7 * var(--corgisize));
+    height: calc(0.7 * var(--corgisize));
+    top: calc(-0.4* var(--corgisize));
+    left: calc(0.12 * var(--corgisize));
+    
+    background-color: var(--corgiwhite);
+    border: var(--bordersize) solid var(--corgiwhite);
+    border-radius: 50%;
   }
   
   .corgibase {
