@@ -21,12 +21,13 @@
     background-color: var(--bgcolor);
   }
   .corgihead {
+	/* jaw  */
     position: absolute;
     
     width: calc(0.8 * var(--corgisize));
-    height: calc(0.35 * var(--corgisize));
-    left: calc(50vw - calc(1 * var(--corgisize)));
-    top: calc(50vh - calc(0.45 * var(--corgisize)));
+    height: calc(0.4 * var(--corgisize));
+    left: calc(50vw - calc(0.73 * var(--corgisize)));
+    top: calc(50vh - calc(0.64 * var(--corgisize)));
     
     background-color: var(--corgiwhite);
    	border: var(--bordersize) solid var(--corgidarkwhite);
@@ -36,20 +37,24 @@
     transform: rotate(25deg);
   }
   .corgihead::before {
+	/* white base */
     content: "";
     position: absolute;
     
-    width: calc(0.7 * var(--corgisize));
-    height: calc(0.7 * var(--corgisize));
-    top: calc(-0.4* var(--corgisize));
-    left: calc(0.12 * var(--corgisize));
+    width: calc(0.76 * var(--corgisize));
+    height: calc(0.76 * var(--corgisize));
+    top: calc(-0.41* var(--corgisize));
+    left: calc(0.1 * var(--corgisize));
     
     background-color: var(--corgiwhite);
     border: var(--bordersize) solid var(--corgiwhite);
-    border-radius: 50%;
+    border-radius: 50% 50% 20% 50%;
   }
-  
+  .corgihead::after {
+  content: "";  
+  }
   .corgibase {
+	/* orange butt base */
     position: absolute;
     
     width: calc(0.96 *var(--corgisize));
@@ -63,6 +68,7 @@
     border-bottom: calc(10 * var(--bordersize)) solid var(--corgiborder);
   }
   .corgibase::before {
+	/* white butt center */
 		content: "";
     position: absolute;
     
@@ -77,6 +83,7 @@
     border-bottom: calc(10 * var(--bordersize)) solid var(--corgidarkwhite);
   } 
   .corgibase::after {
+	/* tail */
     content: "";
     position: absolute;
     
@@ -91,6 +98,7 @@
     border-top: none;
   } 
   .corgibasedetails {
+	/* right x line */
     position: absolute;
     
     width: calc( 0.02 * var(--corgisize));
@@ -106,6 +114,7 @@
     transform: rotate(45deg);
   }
   .corgibasedetails::before {
+	/* left x line */
     content: "";
     position: absolute;
     
@@ -121,6 +130,7 @@
 		transform: rotate(90deg); 
   }
   .corgirightfoot {
+	/* right foot base */
     position: absolute;
     
     width: calc(0.2 *var(--corgisize));
@@ -129,16 +139,15 @@
     top: calc(50vh + calc(0.15 * var(--corgisize)));
     
     background-color: var(--corgiwhite);
-    border: var(--bordersize) solid var(--corgiborder);
+    border: var(--bordersize) solid var(--corgidarkwhite);
     border-radius: 45%;
     border-top: none;
-    border-bottom: var(--bordersize) solid var(--corgidarkwhite);
     border-left: calc(5 * var(--bordersize)) solid var(--corgiborder);
-    border-right: var(--bordersize) solid var(--corgidarkwhite);
     
     transform: rotate(5deg);
   }
   .corgirightfoot::before {
+	/* right paw */
     position: absolute;
     content: "";
     
@@ -148,13 +157,14 @@
     top: calc(0.15 * var(--corgisize));
     
     background-color: var(--corgipink);
+    border: calc(3 * var(--bordersize)) solid var(--corgidarkpink);
     border-radius: 45% 45% 100% 100%;
     border-top: none;
-    border-bottom: calc(3 * var(--bordersize)) solid var(--corgidarkpink);
     border-left: none;
     border-right: none;
   }
   .corgirightfoot::after {
+	/* right toes */
     position: absolute;
     content: "";
     
@@ -170,6 +180,7 @@
     border-right: none;
   }
   .corgileftfoot {
+	/* left foot base */
     position: absolute;
     
     width: calc(0.2 * var(--corgisize));
@@ -178,32 +189,32 @@
     top: calc(50vh + calc(0.15 * var(--corgisize)));
     
     background-color: var(--corgiwhite);
-    border: var(--bordersize) solid var(--corgiborder);
+    border: var(--bordersize) solid var(--corgidarkwhite);
     border-radius: 45%;
     border-top: none;
-    border-bottom: var(--bordersize) solid var(--corgidarkwhite);
-    border-left: var(--bordersize) solid var(--corgidarkwhite);
     border-right: calc(5 * var(--bordersize)) solid var(--corgiborder);
     
-    transform: rotate(350deg);
+    transform: rotate(-5deg);
   }
   .corgileftfoot::before {
+	/* left paw */
     position: absolute;
     content: "";
     
     width: calc(0.14 *var(--corgisize));
     height: calc(0.12 *var(--corgisize));
-    left: calc(0.03 * var(--corgisize));
     top: calc(0.15 * var(--corgisize));
+    left: calc(0.03 * var(--corgisize));
     
     background-color: var(--corgipink);
+    border: calc(3 * var(--bordersize)) solid var(--corgidarkpink);
     border-radius: 45% 45% 100% 100%;
     border-top: none;
-    border-bottom: calc(3 * var(--bordersize)) solid var(--corgidarkpink);
     border-left: none;
     border-right: none;
   }
   .corgileftfoot::after {
+	/* left toes */
     position: absolute;
     content: "";
     
