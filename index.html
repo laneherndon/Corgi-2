@@ -44,6 +44,39 @@
         
       }
       
+      .corgiears::before {
+        content: "";
+        position: absolute;
+        
+        width: calc(0.25 * var(--corgisize));
+        height: calc(0.7 * var(--corgisize));
+        left: calc(0.38 * var(--corgisize));
+        top: calc(0.15 * var(--corgisize));
+        
+        background-color: var(--orange);
+        border: var(--bordersize) solid var(--darkorange);
+        border-radius: 75%;
+        border-left: calc(3 * var(--bordersize)) solid var(--darkorange);
+        
+        transform: rotate(60deg);
+      }
+      
+      .corgiears::after {
+        content: "";
+        position: absolute;
+        
+        width: calc(0.18 * var(--corgisize));
+        height: calc(0.7 * var(--corgisize));
+        left: calc(0.41 * var(--corgisize));
+        top: calc(0.18 * var(--corgisize));
+        
+        background-color: var(--pink);
+        border: var(--bordersize) solid var(--darkpink);
+        border-radius: 75%;
+        border-left: calc(5 * var(--bordersize)) solid var(--darkpink);
+        
+        transform: rotate(60deg);
+      }
       .corgihead {
         /* jaw */
         position: absolute;
