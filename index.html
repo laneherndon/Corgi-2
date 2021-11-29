@@ -20,6 +20,7 @@
         --darkpink: #d99cac;
 
         --feetrotate: 10deg;
+        --tailrotate: 0deg;
       }
 
       body {
@@ -27,57 +28,58 @@
         position: absolute;
       }
 
-      .corgiears {
+      .ears {
         position: absolute;
-        
+
         width: calc(0.23 * var(--corgisize));
         height: calc(0.7 * var(--corgisize));
         left: calc(50vw - calc(0.45 * var(--corgisize)));
         top: calc(50vh - calc(1.23 * var(--corgisize)));
-        
+
         background-color: var(--orange);
         border: var(--bordersize) solid var(--darkorange);
         border-radius: 75%;
         border-left: calc(5 * var(--bordersize)) solid var(--darkorange);
-        
+
         transform: rotate(-5deg);
-        
+
       }
-      
-      .corgiears::before {
+
+      .ears::before {
         content: "";
         position: absolute;
-        
+
         width: calc(0.25 * var(--corgisize));
         height: calc(0.7 * var(--corgisize));
-        left: calc(0.38 * var(--corgisize));
-        top: calc(0.15 * var(--corgisize));
-        
+        left: calc(0.37 * var(--corgisize));
+        top: calc(0.14 * var(--corgisize));
+
         background-color: var(--orange);
         border: var(--bordersize) solid var(--darkorange);
         border-radius: 75%;
-        border-left: calc(3 * var(--bordersize)) solid var(--darkorange);
-        
+        border-left: calc(5 * var(--bordersize)) solid var(--darkorange);
+
         transform: rotate(60deg);
       }
-      
-      .corgiears::after {
+
+      .ears::after {
         content: "";
         position: absolute;
-        
+
         width: calc(0.18 * var(--corgisize));
         height: calc(0.7 * var(--corgisize));
         left: calc(0.41 * var(--corgisize));
         top: calc(0.18 * var(--corgisize));
-        
+
         background-color: var(--pink);
         border: var(--bordersize) solid var(--darkpink);
         border-radius: 75%;
         border-left: calc(5 * var(--bordersize)) solid var(--darkpink);
-        
+
         transform: rotate(60deg);
       }
-      .corgihead {
+
+      .head {
         /* jaw */
         position: absolute;
 
@@ -94,7 +96,7 @@
         transform: rotate(25deg);
       }
 
-      .corgihead::before {
+      .head::before {
         /* white base */
         content: "";
         position: absolute;
@@ -112,10 +114,11 @@
 
       }
 
-      .corgihead::after {
+      .head::after {
         /* nose */
         content: "";
         position: absolute;
+        
         width: calc(0.12 * var(--corgisize));
         height: calc(0.11 * var(--corgisize));
         top: calc(0.01* var(--corgisize));
@@ -124,7 +127,7 @@
         border-radius: 40% 50% 50% 50%;
       }
 
-      .corgiface {
+      .face {
         /*  right orange mask  */
         position: absolute;
 
@@ -142,7 +145,7 @@
         transform: rotate(25deg);
       }
 
-      .corgiface::before {
+      .face::before {
         /* left orange mask */
         content: "";
         position: absolute;
@@ -161,7 +164,47 @@
         transform: rotate(5deg);
       }
 
-      .corgibase {
+      .eyes {
+        position: absolute;
+        
+        width: calc(0.03 * var(--corgisize));
+        height: calc(0.03 * var(--corgisize));
+        left: calc(50vw - calc( 0.20 * var(--corgisize)));
+        top: calc(50vh - calc(0.68 * var(--corgisize)));
+
+        background-color: var(--white);
+        border: var(--bordersize) solid var(--brown);
+        border-radius: 50%;
+        border-top: calc(4 * var(--bordersize)) solid var(--brown);
+        border-bottom: calc(6 * var(--bordersize)) solid var(--brown);
+        border-left: calc(6 * var(--bordersize)) solid var(--brown);
+        border-right: calc(4 * var(--bordersize)) solid var(--brown);
+          
+        transform: rotate(20deg);
+        
+      }
+      
+       .eyes::before {
+        content: "";
+        position: absolute;
+        
+        width: calc(0.03 * var(--corgisize));
+        height: calc(0.03 * var(--corgisize));
+        left: calc(-0.37 * var(--corgisize));
+        top: calc(-0.08 * var(--corgisize));
+
+        background-color: var(--white);
+        border: var(--bordersize) solid var(--brown);
+        border-radius: 50%;
+        border-top: calc(4 * var(--bordersize)) solid var(--brown);
+        border-bottom: calc(6* var(--bordersize)) solid var(--brown);
+        border-left: calc(4 * var(--bordersize)) solid var(--brown);
+        border-right: calc(1 * var(--bordersize)) solid var(--brown);
+          
+        transform: rotate(4deg);
+        
+      }
+      .base {
         /* orange butt base */
         position: absolute;
 
@@ -176,7 +219,7 @@
         border-bottom: calc(16 * var(--bordersize)) solid var(--darkorange);
       }
 
-      .corgibase::before {
+      .base::before {
         /* white butt center */
         content: "";
         position: absolute;
@@ -192,7 +235,7 @@
         border-bottom: calc(10 * var(--bordersize)) solid var(--darkwhite);
       }
 
-      .corgibase::after {
+      .base::after {
         /* tail */
         content: "";
         position: absolute;
@@ -206,9 +249,11 @@
         border: calc(2 * var(--bordersize)) solid var(--darkorange);
         border-radius: 45%;
         border-top: none;
+        
+        transform: rotate(var(--tailrotate));
       }
 
-      .corgibasedetails {
+      .basedetails {
         /* right x line */
         position: absolute;
 
@@ -226,7 +271,7 @@
         transform: rotate(45deg);
       }
 
-      .corgibasedetails::before {
+      .basedetails::before {
         /* left x line */
         content: "";
         position: absolute;
@@ -243,7 +288,7 @@
         transform: rotate(90deg);
       }
 
-      .corgirightfoot {
+      .rightfoot {
         /* right foot base */
         position: absolute;
 
@@ -261,7 +306,7 @@
         transform: rotate(var(--feetrotate));
       }
 
-      .corgirightfoot::before {
+      .rightfoot::before {
         /* right paw */
         position: absolute;
         content: "";
@@ -279,7 +324,7 @@
         border-right: none;
       }
 
-      .corgirightfoot::after {
+      .rightfoot::after {
         /* right toes */
         position: absolute;
         content: "";
@@ -296,7 +341,7 @@
         border-right: none;
       }
 
-      .corgileftfoot {
+      .leftfoot {
         /* left foot base */
         position: absolute;
 
@@ -314,7 +359,7 @@
         transform: rotate(calc(-1 * var(--feetrotate)));
       }
 
-      .corgileftfoot::before {
+      .leftfoot::before {
         /* left paw */
         position: absolute;
         content: "";
@@ -332,7 +377,7 @@
         border-right: none;
       }
 
-      .corgileftfoot::after {
+      .leftfoot::after {
         /* left toes */
         position: absolute;
         content: "";
@@ -352,12 +397,13 @@
   </head>
 
   <body>
-    <div class="corgiears"></div>
-    <div class="corgihead"></div>
-    <div class="corgiface"></div>
-    <div class="corgibase"></div>
-    <div class="corgibasedetails"></div>
-    <div class="corgirightfoot"></div>
-    <div class="corgileftfoot"></div>
+    <div class="ears"></div>
+    <div class="head"></div>
+    <div class="face"></div>
+    <div class="eyes"></div>
+    <div class="base"></div>
+    <div class="basedetails"></div>
+    <div class="rightfoot"></div>
+    <div class="leftfoot"></div>
   </body>
 </html>
