@@ -5,9 +5,11 @@
     <title>CorgiArt</title>
     <style>
       :root {
+        /* size variables */
         --corgisize: 200px;
         --bordersize: calc(0.01 * var(--corgisize));
 
+        /* color variables */
         --bgcolor: #f1e36f;
         --orange: #deac33;
         --darkorange: #c6961d;
@@ -19,16 +21,22 @@
         --pink: #fab4b8;
         --darkpink: #d99cac;
 
+        /* variables for experimentation */
         --feetrotate: 10deg;
         --tailrotate: 0deg;
       }
 
       body {
-        background-color: var(--bgcolor);
         position: absolute;
+
+        background-color: var(--bgcolor);
+        color: var(--white);
+        text-shadow: 3px 3px var(--darkwhite);
       }
 
+
       .ears {
+        /* right ear */
         position: absolute;
 
         width: calc(0.23 * var(--corgisize));
@@ -46,6 +54,7 @@
       }
 
       .ears::before {
+        /* left ear */
         content: "";
         position: absolute;
 
@@ -63,6 +72,7 @@
       }
 
       .ears::after {
+        /* pink ear */
         content: "";
         position: absolute;
 
@@ -165,6 +175,7 @@
       }
 
       .eyes {
+        /* right eye */
         position: absolute;
 
         width: calc(0.03 * var(--corgisize));
@@ -184,6 +195,7 @@
       }
 
       .eyes::before {
+        /*  left eye  */
         content: "";
         position: absolute;
 
@@ -203,6 +215,7 @@
       }
 
       .mouth {
+        /* nose connect */
         position: absolute;
 
         width: calc(0.03 * var(--corgisize));
@@ -217,6 +230,7 @@
       }
 
       .mouth::before {
+        /* smile */
         content: "";
         position: absolute;
 
@@ -433,5 +447,6 @@
     <div class="basedetails"></div>
     <div class="rightfoot"></div>
     <div class="leftfoot"></div>
+    <h1>Corgi! by E.T.</h1>
   </body>
 </html>
