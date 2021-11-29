@@ -118,7 +118,7 @@
         /* nose */
         content: "";
         position: absolute;
-        
+
         width: calc(0.12 * var(--corgisize));
         height: calc(0.11 * var(--corgisize));
         top: calc(0.01* var(--corgisize));
@@ -166,44 +166,71 @@
 
       .eyes {
         position: absolute;
-        
+
         width: calc(0.03 * var(--corgisize));
         height: calc(0.03 * var(--corgisize));
-        left: calc(50vw - calc( 0.20 * var(--corgisize)));
+        left: calc(50vw - calc(0.20 * var(--corgisize)));
         top: calc(50vh - calc(0.68 * var(--corgisize)));
 
         background-color: var(--white);
-        border: var(--bordersize) solid var(--brown);
         border-radius: 50%;
-        border-top: calc(4 * var(--bordersize)) solid var(--brown);
-        border-bottom: calc(6 * var(--bordersize)) solid var(--brown);
-        border-left: calc(6 * var(--bordersize)) solid var(--brown);
-        border-right: calc(4 * var(--bordersize)) solid var(--brown);
-          
+        border-top: calc(4 * var(--bordersize)) solid var(--black);
+        border-bottom: calc(6 * var(--bordersize)) solid var(--black);
+        border-left: calc(6 * var(--bordersize)) solid var(--black);
+        border-right: calc(4 * var(--bordersize)) solid var(--black);
+
         transform: rotate(20deg);
-        
+
       }
-      
-       .eyes::before {
+
+      .eyes::before {
         content: "";
         position: absolute;
-        
+
         width: calc(0.03 * var(--corgisize));
         height: calc(0.03 * var(--corgisize));
         left: calc(-0.37 * var(--corgisize));
         top: calc(-0.08 * var(--corgisize));
 
         background-color: var(--white);
-        border: var(--bordersize) solid var(--brown);
         border-radius: 50%;
-        border-top: calc(4 * var(--bordersize)) solid var(--brown);
-        border-bottom: calc(6* var(--bordersize)) solid var(--brown);
-        border-left: calc(4 * var(--bordersize)) solid var(--brown);
-        border-right: calc(1 * var(--bordersize)) solid var(--brown);
-          
+        border-top: calc(4 * var(--bordersize)) solid var(--black);
+        border-bottom: calc(6* var(--bordersize)) solid var(--black);
+        border-left: calc(4 * var(--bordersize)) solid var(--black);
+        border-right: calc(1 * var(--bordersize)) solid var(--black);
+
         transform: rotate(4deg);
-        
       }
+
+      .mouth {
+        position: absolute;
+
+        width: calc(0.03 * var(--corgisize));
+        height: calc(0.14 * var(--corgisize));
+        left: calc(50vw - calc(0.65 * var(--corgisize)));
+        top: calc(50vh - calc(0.68 * var(--corgisize)));
+
+        border-radius: 50%;
+        border-left: calc(3 * var(--bordersize)) solid var(--brown);
+
+        transform: rotate(20deg);
+      }
+
+      .mouth::before {
+        content: "";
+        position: absolute;
+
+        width: calc(0.17 * var(--corgisize));
+        height: calc(0.1 * var(--corgisize));
+        left: calc(-0.065 * var(--corgisize));
+        top: calc(0.025 * var(--corgisize));
+
+        border-radius: 50%;
+        border-bottom: calc(3 * var(--bordersize)) solid var(--brown);
+
+        transform: rotate(10deg);
+      }
+
       .base {
         /* orange butt base */
         position: absolute;
@@ -249,7 +276,7 @@
         border: calc(2 * var(--bordersize)) solid var(--darkorange);
         border-radius: 45%;
         border-top: none;
-        
+
         transform: rotate(var(--tailrotate));
       }
 
@@ -401,6 +428,7 @@
     <div class="head"></div>
     <div class="face"></div>
     <div class="eyes"></div>
+    <div class="mouth"></div>
     <div class="base"></div>
     <div class="basedetails"></div>
     <div class="rightfoot"></div>
